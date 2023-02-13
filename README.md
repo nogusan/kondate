@@ -33,9 +33,9 @@ Things you may want to cover:
  
 ### association
 
--has_one :spec
--has_many :schedules
--has_many :menus
+- has_one :spec
+- has_many :schedules
+- has_many :menus
 
 ## specsテーブル
 
@@ -49,7 +49,7 @@ Things you may want to cover:
 
 ### association
 
--belongs_to :user
+- belongs_to :user
 
 ## schedulesテーブル
 
@@ -61,8 +61,8 @@ Things you may want to cover:
 
 ### association
 
--belongs_to :user
--belongs_to :menu
+- belongs_to :user
+- belongs_to :menu
 
 ## menusテーブル
 
@@ -77,5 +77,5 @@ Things you may want to cover:
 
 ### association
 
--has_many :schedules
--belongs_to :user
+- has_many :schedules
+- belongs_to :user
