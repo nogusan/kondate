@@ -123,7 +123,7 @@ Things you may want to cover:
 |------|----|-------|
 |user|references|null:false, foreign_key:true|
 |menu|references|null:false, foreign_key:true|
-|date_id|integer|null:false|
+|day_time_id|integer|null:false|
 
 ### association
 
