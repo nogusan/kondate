@@ -1,6 +1,9 @@
 <div class="index_body">
   <div class="side_bar">
     こんにちは
+    <% if user_signed_in? %>
+    <%= current_user.nickname %>さん
+    <% end %>
   </div>
 
   <div class="main">
