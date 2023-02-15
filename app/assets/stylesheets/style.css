@@ -37,8 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: antiquewhite;
-  color: black;
+  background-color:darkorange;
 }
 .header__bar, .row {
   display: flex;
@@ -50,5 +49,5 @@ a {
 /* フッター */
 
 footer {
-  background-color: aquamarine;
+  background-color: darkorange;
 }

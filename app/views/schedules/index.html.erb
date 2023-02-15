@@ -4,9 +4,112 @@
     <% if user_signed_in? %>
     <%= current_user.nickname %>さん
     <% end %>
+    <div class="side_bar_menu" >
+    <div class="side_title">本日の献立</div>
+      <div class="side_schedule">
+      <div class="date_time"> 朝 </div>
+        <div class="side_bar_box">
+          <div class="side_bar_name"><%= "麻婆豆腐" %></div>
+          <div class="side_bar_nutrients">
+            栄養素
+            <div class="side_bar_calry nutrients"><%= "・カロリー : 700 kcal"%></div>
+            <div class="side_bar_protein nutrients"><%= "・タンパク質 : 40 g"%></div>
+            <div class="side_bar_sugar nutrients"><%= "・糖質 : 120 g"%></div>
+            <div class="side_bar_lipid nutrients"><%= "・脂質 : 40 g"%></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side_schedule">
+      <div class="date_time"> 昼 </div>
+        <div class="side_bar_box">
+          <div class="side_bar_name"><%= "焼肉" %></div>
+          <div class="side_bar_nutrients">
+            栄養素
+            <div class="side_bar_calry nutrients"><%= "・カロリー : 700 kcal"%></div>
+            <div class="side_bar_protein nutrients"><%= "・タンパク質 : 40 g"%></div>
+            <div class="side_bar_sugar nutrients"><%= "・糖質 : 120 g"%></div>
+            <div class="side_bar_lipid nutrients"><%= "・脂質 : 40 g"%></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side_schedule">
+      <div class="date_time"> 夜 </div>
+        <div class="side_bar_box">
+          <div class="side_bar_name"><%= "お寿司" %></div>
+          <div class="side_bar_nutrients">
+            栄養素
+            <div class="side_bar_calry nutrients"><%= "・カロリー : 700 kcal"%></div>
+            <div class="side_bar_protein nutrients"><%= "・タンパク質 : 40 g"%></div>
+            <div class="side_bar_sugar nutrients"><%= "・糖質 : 120 g"%></div>
+            <div class="side_bar_lipid nutrients"><%= "・脂質 : 40 g"%></div>
+          </div>
+        </div>
+
+        <div class="side_bar_box">
+          <div class="side_bar_name"><%= "お寿司" %></div>
+          <div class="side_bar_nutrients">
+            栄養素
+            <div class="side_bar_calry nutrients"><%= "・カロリー : 700 kcal"%></div>
+            <div class="side_bar_protein nutrients"><%= "・タンパク質 : 40 g"%></div>
+            <div class="side_bar_sugar nutrients"><%= "・糖質 : 120 g"%></div>
+            <div class="side_bar_lipid nutrients"><%= "・脂質 : 40 g"%></div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 
   <div class="main">
-  ヤッホー
+    <div class="today_total">
+      <h2>摂取栄養素</h2>
+      <div class="total_box" >
+        <div class="today_nutrients">
+          <div class="today_nutrients_title">本日の総摂取量</div>
+          <div class="today_nutrients_box">
+            <div class="total_calry"><%= "・カロリー : 3000 kcal"%></div>
+            <div class="total_protein"><%= "・タンパク質 : 100 g"%></div>
+            <div class="total_sugar"><%= "・糖質 : 400 g"%></div>
+            <div class="total_lipid"><%= "・脂質 : 200 g"%></div>
+          </div>
+        </div>
+
+        <div class="today_nutrients">
+          <div class="today_nutrients_title">目標値</div>
+          <div class="today_nutrients_box">
+            <div class="total_calry"><%= "・カロリー : 3000 kcal"%></div>
+            <div class="total_protein"><%= "・タンパク質 : 100 g"%></div>
+            <div class="total_sugar"><%= "・糖質 : 400 g"%></div>
+            <div class="total_lipid"><%= "・脂質 : 200 g"%></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h2>おすすめのmenu一覧</h2>
+    <div class="main_menu" >
+      <div class="menu_box">
+        <div class="menu_name"><%= "麻婆豆腐" %></div>
+        <div class="menu_nutrients">
+          栄養素
+          <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
+          <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
+          <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
+          <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+        </div>
+      </div>
+      <div class="menu_box">
+        <div class="menu_name"><%= "焼肉" %></div>
+        <div class="menu_nutrients">
+          栄養素
+          <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
+          <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
+          <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
+          <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
