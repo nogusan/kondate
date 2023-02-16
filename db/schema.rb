@@ -19,11 +19,15 @@ ActiveRecord::Schema.define(version: 2023_02_15_221511) do
   end
 
   create_table "specs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "user_calorie"
-    t.integer "user_protein"
-    t.integer "user_suger"
-    t.integer "user_lipid"
+    t.integer "user_calorie", null: false
+    t.integer "user_protein", null: false
+    t.integer "user_suger", null: false
+    t.integer "user_lipid", null: false
     t.bigint "user_id", null: false
+    t.integer "heigth_id", null: false
+    t.integer "gender_id", null: false
+    t.integer "age_id", null: false
+    t.integer "active_level_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_specs_on_user_id"

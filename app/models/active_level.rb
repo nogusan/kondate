@@ -5,4 +5,8 @@ class Active_level < ActiveHash::Bace
    { id: 3, name: '2' },
    { id: 4, name: '3' }
   ]
+
+  include ActiveHash::Associations
+  has_many :apecs
+
 end

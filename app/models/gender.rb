@@ -5,4 +5,8 @@ class Gender < ActiveHash::Bace
    { id: 3, name: '女性' },
    { id: 4, name: '選択しない' }
   ]
+
+  include ActiveHash::Associations
+  has_many :apecs
+
 end

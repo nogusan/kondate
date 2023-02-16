@@ -11,4 +11,8 @@ class Age < ActiveHash::Bace
    { id: 9, name: '80' },
    { id: 10, name: '90' }
   ]
+
+  include ActiveHash::Associations
+  has_many :apecs
+
 end

@@ -15,4 +15,8 @@ class Heigth < ActiveHash::Bace
    { id: 13, name: '195' },
    { id: 14, name: '200' }
   ]
+
+  include ActiveHash::Associations
+  has_many :apecs
+
 end
