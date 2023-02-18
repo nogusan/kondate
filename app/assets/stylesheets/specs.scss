@@ -1,3 +1,48 @@
 // Place all the styles related to the specs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top {
+  height: calc(100vh - 130px) ;
+  display: flex;
+  justify-content: center;
+}
+.spec_main {
+  height: calc(100vh - 95px) ;
+}
+.input_box {
+  width: 600px;
+  border: solid gray 2px;
+  padding: 10px;
+}
+.spec_box {
+  margin-left: 40px;
+  display: flex;
+  margin-bottom: 40px;
+}
+.form_text_box {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+}
+.output_box {
+  justify-content: center;
+  border: solid gray 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.value_box {
+  margin-left: 40px;
+}
+.value {
+  border: solid gray 2px;
+  width: 100px;
+  font-size: large;
+}
+.title2 {
+  margin-left: 40px;
+}
