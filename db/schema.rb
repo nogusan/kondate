@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_02_15_221511) do
   create_table "specs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "user_calorie", null: false
     t.integer "user_protein", null: false
-    t.integer "user_suger", null: false
+    t.integer "user_sugar", null: false
     t.integer "user_lipid", null: false
     t.bigint "user_id", null: false
     t.integer "heigth_id", null: false
