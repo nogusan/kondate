@@ -1,7 +1,7 @@
 class CreateSpecs < ActiveRecord::Migration[6.0]
   def change
     create_table :specs do |t|
-
+      t.integer :ave_whigth, null: false
       t.integer :user_calorie, null:false
       t.integer :user_protein, null: false
       t.integer :user_sugar, null: false

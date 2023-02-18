@@ -71,7 +71,7 @@ Things you may want to cover:
 - 
 
 ## データベース設計
-[![Image from Gyazo](https://i.gyazo.com/d426dab2b0db7ff89e2ce98b3741c950.png)](https://gyazo.com/d426dab2b0db7ff89e2ce98b3741c950)
+[![Image from Gyazo](https://i.gyazo.com/25a64ac554102548cc4a412df2caff88.png)](https://gyazo.com/25a64ac554102548cc4a412df2caff88)
 ## 画面遷移図
 
 ## 開発環境
@@ -107,6 +107,7 @@ Things you may want to cover:
 
 |column|type|options|
 |------|----|-------|
+|ave_whigth|integer|null:false|
 |user_calorie|integer|null:false|
 |user_protein|integer|null:false|
 |user_sugar|integer|null:false|
