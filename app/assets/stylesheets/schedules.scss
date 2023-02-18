@@ -7,7 +7,6 @@
  
 }
 .side_bar {
-  background-color: #ddd;
   width: 400px;
   height: calc(100% - 70px);
 }
@@ -23,36 +22,40 @@
   margin-bottom: 10px;
 }
 .side_bar_box {
-  background-color: aliceblue;
   width: 250px;
   padding: 10px;
   margin:0px 20px 10px;
+  border: solid gray 2px;
+  border-radius: 15px;
+}
+.side_bar_name {
+  font-weight: bold;
 }
 .side_bar_name {
   font-size: 20px;
 }
 .side_bar_nutrients {
-  background-color: #fff9f9;
   margin-left: 20px;
+  border: solid gainsboro 1px;
 }
 .nutrients {
   font-size: 12px;
 }
 .main {
-  background-color: #ccc;
   width: calc(100% - 300px);
 }
 .today_total {
-  background-color: ccc;
   padding-bottom: 20px;
 }
 .total_box {
   display: flex;
+  
 }
 .today_nutrients {
-  background-color: #c0c0c0;
   margin-left: 30px;
   width: 300px;
+  border: solid gray 2px;
+  border-radius: 15px;
 }
 .today_nutrients_title {
   font-size: large;
@@ -64,15 +67,16 @@
   display: flex;
 }
 .menu_box {
-  background-color: aliceblue;
   width: 300px;
   padding: 10px;
   margin: 20px;
+  border: solid gray 2px;
+  border-radius: 15px;
 }
 .menu_name {
   font-size: 20px;
 }
 .menu_nutrients {
-  background-color: #fff9f9;
   margin-left: 20px;
+  border: solid gainsboro 1px;
 }
