@@ -16,9 +16,22 @@ class SpecsController < ApplicationController
     end
   end
 
+  def edit
+    @spec = Spec.find(params[:id])
+  end
+
+  def update
+    @spec = Spec.find(params[:id])
+    if @spec.update(spec_params)
+      redirect_to specs_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def spec_params
-    params.require(:spec).permit(:user_calorie, :user_protein, :user_sugar, :user_lipid, :heigth_id,:gender_id,:age_id, :active_level_id).merge(user_id: current_user.id)
+    params.require(:spec).permit(:ave_weigth, :user_calorie, :user_protein, :user_sugar, :user_lipid, :heigth_id,:gender_id,:age_id, :active_level_id).merge(user_id: current_user.id)
   end
 end

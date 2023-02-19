@@ -2,7 +2,7 @@
   <h2>マイ栄養素登録画面</h2>
   <div class="top">
     <div class="all_input_box" >
-      <%= form_with model: @spec, url:specs_path, local: true do |f| %>
+      <%= form_with model: @spec, url:spec_path(current_user), method: :patch, local: true do |f| %>
       <div class="input_box">
         <div class="title">あなたの身体機能を記入してください</div>
         <div class="spec_box">

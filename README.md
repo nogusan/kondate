@@ -107,7 +107,7 @@ Things you may want to cover:
 
 |column|type|options|
 |------|----|-------|
-|ave_whigth|integer|null:false|
+|ave_weigth|integer|null:false|
 |user_calorie|integer|null:false|
 |user_protein|integer|null:false|
 |user_sugar|integer|null:false|
