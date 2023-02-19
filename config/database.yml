@@ -12,13 +12,12 @@
 default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  socket: /tmp/mysql.sock
+  username: root
 
 development:
   <<: *default
   adapter: mysql2
   database: kondate_development
-  username: root
   password:
   host: localhost
 
@@ -29,7 +28,6 @@ test:
   <<: *default
   adapter: mysql2
   database: kondate_test
-  username: root
   password:
   host: localhost
 
@@ -56,5 +54,4 @@ production:
   <<: *default
   adapter: postgresql
   database: kondate_production
-  username: kondate
   password: <%= ENV['KONDATE_DATABASE_PASSWORD'] %>

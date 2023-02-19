@@ -45,6 +45,20 @@ a {
 }
 .post {
 }
+.header_next {
+  display: flex;
+  justify-content: space-between;
+}
+.second_title_ber {
+  display: flex;
+  
+}
+.second_title {
+  margin-left: 20px;
+}
+.hello_user {
+  text-align: right;
+}
 
 /* フッター */
 

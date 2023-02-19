@@ -1,0 +1,91 @@
+<div class="spec_main">
+  <% if @spec == nil%>
+    <div class="new_date_box">
+      <div class="new_btn_box" >
+       <div class="all_new_box" >
+          <div class="new_date_text">まずはマイ栄養素の新規登録しよう!</div>
+          <div class="new_date">
+            <%= link_to "新規登録", new_spec_path, class: "new_btn" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <h2>マイ栄養素確認画面</h2>
+    <div class="user_top">
+      <div class="user_box">
+        <div class="all_input_box" >
+          <div class="title">あなたの身体記録</div>
+          <div class="spec_box">
+            
+            <div class="form_text_box" >
+              <label class="form_text">身長</label>
+              <div class="value">
+                <%= @spec.heigth.name %> cm
+              </div>
+            </div>
+
+            <div class="form_text_box" >
+              <label class="form_text">性別</label>
+              <div class="value">
+                <%= @spec.gender.name %>
+              </div>
+            </div>
+
+            <div class="form_text_box" >
+              <label class="form_text">年代</label>
+              <div class="value">
+                <%= @spec.age.name %> 代
+              </div>
+            </div>
+
+            <div class="form_text_box" >
+              <label class="form_text">活動レベル</label>
+              <div class="value">
+                <%= @spec.active_level.name %>
+              </div>
+            </div>  
+          </div>
+
+          <div class="value_box">
+            <div class="title">あなたの年代の平均体重</div>
+            <div class="form_text_box" >
+              <div class="value">
+                <%= @spec.ave_weigth %> kg
+              </div>
+            </div> 
+
+            <div class="title">あなたの1日平均摂取栄養素</div>
+            <div class="form_text_box" >
+              <label class="form_text">カロリー</label>
+              <div class="value">
+                <%= @spec.user_calorie %> kcal
+              </div>
+            </div> 
+
+            <div class="form_text_box" >
+              <label class="form_text">タンパク質</label>
+              <div class="value">
+                <%= @spec.user_protein %> g
+              </div>
+            </div> 
+
+            <div class="form_text_box" >
+              <label class="form_text">糖質</label>
+              <div class="value">
+                <%= @spec.user_sugar %> g
+              </div>
+            </div> 
+
+            <div class="form_text_box" >
+              <label class="form_text">脂質</label>
+              <div class="value">
+                <%= @spec.user_lipid %> g
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

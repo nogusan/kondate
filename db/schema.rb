@@ -10,12 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_14_204255) do
+ActiveRecord::Schema.define(version: 2023_02_15_221511) do
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "day_time_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "specs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "ave_weigth", null: false
+    t.integer "user_calorie", null: false
+    t.integer "user_protein", null: false
+    t.integer "user_sugar", null: false
+    t.integer "user_lipid", null: false
+    t.bigint "user_id", null: false
+    t.integer "heigth_id", null: false
+    t.integer "gender_id", null: false
+    t.integer "age_id", null: false
+    t.integer "active_level_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_specs_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -31,4 +47,5 @@ ActiveRecord::Schema.define(version: 2023_02_14_204255) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "specs", "users"
 end

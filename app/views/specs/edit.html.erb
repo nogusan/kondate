@@ -1,0 +1,85 @@
+<div class="spec_main">
+  <h2>マイ栄養素登録画面</h2>
+  <div class="top">
+    <div class="all_input_box" >
+      <%= form_with model: @spec, url:spec_path(current_user), method: :patch, local: true do |f| %>
+      <div class="input_box">
+        <div class="title">あなたの身体機能を記入してください</div>
+        <div class="spec_box">
+          <div class="form_text_box" >
+            <div class='form_text_wrap'>
+              <label class="form_text">身長</label>
+            </div>
+            <%= f.collection_select(:heigth_id, Heigth.all, :id, :name, {}, {class:"heigth-select"}) %> cm
+          </div>
+
+          <div class="form_text_box" >
+            <div class='form_text_wrap'>
+              <label class="form_text">性別</label>
+            </div>
+            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select"}) %>
+          </div>
+
+          <div class="form_text_box" >
+            <div class='form_text_wrap'>
+              <label class="form_text">年代</label>
+            </div>
+            <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"age-select"}) %> 代
+          </div>
+
+          <div class="form_text_box" >
+            <div class='form_text_wrap'>
+              <label class="form_text">活動レベル</label>
+            </div>
+            <%= f.collection_select(:active_level_id, ActiveLevel.all, :id, :name, {}, {class:"active_level-select"}) %>
+          </div>  
+        </div>
+
+        <div class="form_text_box">
+          <%= f.submit "自動算出" ,class:"btn" %>
+        </div>
+      </div>
+
+      <div class="output_box">
+        <div class="title">あなたの年代の平均体重</div>
+        <div class="form_text_box" >
+          <%= f.text_field :ave_weigth, class:"ave_weigth" %> kg
+        </div> 
+
+        <div class="titel">あなたの1日平均摂取栄養素</div>
+        <div class="form_text_box" >
+          <div class='form_text_wrap'>
+            <label class="form_text">カロリー</label>
+          </div>
+          <%= f.text_field :user_calorie, class:"user_calorie" %> kcal
+        </div> 
+
+        <div class="form_text_box" >
+          <div class='form_text_wrap'>
+            <label class="form_text">タンパク質</label>
+          </div>
+          <%= f.text_field :user_protein, class:"user_protein" %> g
+        </div> 
+
+        <div class="form_text_box" >
+          <div class='form_text_wrap'>
+            <label class="form_text">糖質</label>
+          </div>
+          <%= f.text_field :user_sugar, class:"user_sugar" %> g
+        </div> 
+
+        <div class="form_text_box" >
+          <div class='form_text_wrap'>
+            <label class="form_text">脂質</label>
+          </div>
+          <%= f.text_field :user_lipid, class:"user_lipid" %> g
+        </div> 
+
+        <div class="form_text_box">
+          <%= f.submit "保存する" ,class:"btn" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

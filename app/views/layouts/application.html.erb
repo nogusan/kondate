@@ -10,13 +10,12 @@
   </head>
 
   <body>
-     <header class="header">
+    <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">kondate</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "投稿する", "/" %>
           </div>
         <% else %>
           <div class="grid-6">
@@ -25,6 +24,30 @@
           </div>
         <% end %>
       </div>
+
+      <div class="header_next">
+        <div class="second_title_ber">
+          <div class="second_title">
+            <%= link_to "献立登録", "/" %>
+          </div>
+          <div class="second_title">
+            <%= link_to "マイ栄養素確認", specs_path %>
+          </div>
+          <div class="second_title">
+            <%= link_to "マイ栄養素設定", edit_spec_path(current_user) %>
+          </div>
+          <div class="second_title">
+            <%= link_to "menu登録", "/" %>
+          </div>
+        </div>
+        <div class="hello_user">
+        こんにちは
+        <% if user_signed_in? %>
+          <%= current_user.nickname %>さん
+        <% end %>
+        </div>
+      </div>
+      
     </header>
 
     <%= yield %>
