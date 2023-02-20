@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'schedules#index'
   resources :schedules, only: :index
   resources :specs, only: [:index, :new, :create, :edit, :update]
+  resources :menus, only: [:index, :new, :create]
 end
