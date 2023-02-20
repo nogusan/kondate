@@ -12,6 +12,7 @@ class Spec < ApplicationRecord
   validates :user_protein, presence: true
   validates :user_sugar, presence: true
   validates :user_lipid, presence: true
+  validates :user_id, uniqueness: true
 
   validates :heigth_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :gender_id, numericality: { other_than: 1, message: "can't be blank" }

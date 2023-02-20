@@ -71,16 +71,23 @@
             <div class="total_lipid"><%= "・脂質 : 200 g"%></div>
           </div>
         </div>
-
-        <div class="today_nutrients">
-          <div class="today_nutrients_title">目標値</div>
-          <div class="today_nutrients_box">
-            <div class="total_calry">・カロリー : <%= @spec.user_calorie%> kcal </div>
-            <div class="total_protein">・タンパク質 : <%=  @spec.user_protein %> g</div>
-            <div class="total_sugar">・糖質 : <%= @spec.user_sugar %> g</div>
-            <div class="total_lipid">・脂質 : <%= @spec.user_lipid %> g</div>
+        <% if @spec == nil %>
+          <div class="today_nutrients">
+          <div class="today_nutrients_title">本日の総摂取量</div>
+            
           </div>
-        </div>
+          
+        <% else %>
+          <div class="today_nutrients">
+            <div class="today_nutrients_title">目標値</div>
+            <div class="today_nutrients_box">
+              <div class="total_calry">・カロリー : <%= @spec.user_calorie%> kcal </div>
+              <div class="total_protein">・タンパク質 : <%=  @spec.user_protein %> g</div>
+              <div class="total_sugar">・糖質 : <%= @spec.user_sugar %> g</div>
+              <div class="total_lipid">・脂質 : <%= @spec.user_lipid %> g</div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
     
