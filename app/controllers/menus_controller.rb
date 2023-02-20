@@ -19,6 +19,6 @@ class MenusController < ApplicationController
   end
 
   def menu_params
-    params.permit(:name, :calorie, :protein, :sugar, :lipid).merge(user_id: current_user.id)
+    params.permit(:name, :calorie, :protein, :sugar, :lipid, :image).merge(user_id: current_user.id)
   end
 end
