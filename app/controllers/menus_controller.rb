@@ -5,10 +5,16 @@ class MenusController < ApplicationController
   end
 
   def new
-    @menu = Menu.new(menu_params)
+    @menu = Menu.new
   end
 
   def create
+    menu = Menu.new(menu_params)
+    if menu.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
@@ -19,6 +25,6 @@ class MenusController < ApplicationController
   end
 
   def menu_params
-    params.permit(:name, :calorie, :protein, :sugar, :lipid, :image).merge(user_id: current_user.id)
+    params.require(:menu).permit(:name, :calorie, :protein, :sugar, :lipid, :image).merge(user_id: current_user.id)
   end
 end

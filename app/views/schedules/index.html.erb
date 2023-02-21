@@ -103,16 +103,22 @@
           <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
         </div>
       </div>
-      <div class="menu_box">
-        <div class="menu_name"><%= "焼肉" %></div>
-        <div class="menu_nutrients">
-          栄養素
-          <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
-          <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
-          <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
-          <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+      <% @menus.each do |menu|%>
+        <div class="menu_box">
+          <div class="menu_name">
+            <%= menu.name %>
+          </div>
+          <div class="menu_menu">
+            <%= image_tag menu.image.variant(resize: '150x150'), class: 'message-image' if menu.image.attached? %>
+            <div class="menu_nutrients">
+              <div class="menu_calry">カロリー : <%= menu.calorie %> kcal</div>
+              <div class="menu_protein">タンパク質 : <%= menu.protein %> g</div>
+              <div class="menu_sugar">糖質 : <%= menu.sugar %> g</div>
+              <div class="menu_lipid">脂質 : <%= menu.lipid %> g</div>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
