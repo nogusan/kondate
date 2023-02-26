@@ -1,0 +1,55 @@
+<div class="menu_main">
+  <div class="menu_boxx">
+    <%= form_with model: @menu, url: menus_path, method: :post, local: true do |m| %>
+      <div class="menu_output_box">
+        <div class="menu_titel">メニューを登録しよう！</div>
+
+        <div class="menu_form_box" >
+          <label class="form-image">
+            <span class="image-file">画像を選択</span>
+            <%= m.file_field :image, class: 'hidden' %>
+          </label>
+        </div> 
+        
+        <div class="menu_form_box" >
+          <div class='menu_form_wrap'>
+            <label class="menu_text">メニュー名</label>
+          </div>
+          <%= m.text_field :name, class:"name" %> 
+        </div> 
+
+        <div class="menu_form_box" >
+          <div class='menu_form_wrap'>
+            <label class="menu_text">カロリー</label>
+          </div>
+          <%= m.text_field :calorie, class:"calorie" %> kcal
+        </div> 
+
+        <div class="menu_form_box" >
+          <div class='menu_form_wrap'>
+            <label class="menu_text">タンパク質</label>
+          </div>
+          <%= m.text_field :protein, class:"protein" %> g
+        </div> 
+
+        <div class="menu_form_box" >
+          <div class='menu_form_wrap'>
+            <label class="menu_text">糖質</label>
+          </div>
+          <%= m.text_field :sugar, class:"sugar" %> g
+        </div> 
+
+        <div class="menu_form_box" >
+          <div class='menu_form_wrap'>
+            <label class="menu_text">脂質</label>
+          </div>
+          <%= m.text_field :lipid, class:"lipid" %> g
+        </div> 
+
+        <div class="menu_form_box">
+          <%= m.submit "保存する" ,class:"btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

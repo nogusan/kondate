@@ -55,28 +55,35 @@
   margin-left: 30px;
   width: 300px;
   border: solid gray 2px;
-  border-radius: 15px;
+
 }
 .today_nutrients_title {
   font-size: large;
+  background-color: #fedcbd;
 }
 .today_nutrients_box {
   margin-left: 20px;
 }
 .main_menu {
   display: flex;
+  flex-wrap: wrap;
 }
 .menu_box {
-  width: 300px;
-  padding: 10px;
-  margin: 20px;
+  width: 310px;
+  padding: 5px;
+  margin: 10px;
+  height: 160px;
   border: solid gray 2px;
   border-radius: 15px;
 }
 .menu_name {
   font-size: 20px;
 }
+.menu_menu {
+  display: flex;
+}
 .menu_nutrients {
-  margin-left: 20px;
+  margin-left: 10px;
   border: solid gainsboro 1px;
+  font-size: 12px;
 }

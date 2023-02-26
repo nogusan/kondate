@@ -1,0 +1,33 @@
+// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.menu_main {
+  height: calc(100vh - 95px);
+  display: flex;
+  justify-content: center;
+}
+.menu_boxx {
+  width: 700px;
+  height: 600px;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px -2px ;
+}
+.menu_output_box {
+  margin: 20px 0 0 20px;
+}
+.menu_form_box {
+  margin: 5px 0 5px 0 ;
+}
+.form-image {
+  font-size: 15px;
+  background-color: gainsboro;
+  padding: 10px;
+  border: solid 1px gainsboro;
+  box-shadow: 5px 5px 5px -10px ;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}

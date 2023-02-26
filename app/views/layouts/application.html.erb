@@ -24,29 +24,47 @@
           </div>
         <% end %>
       </div>
-
-      <div class="header_next">
-        <div class="second_title_ber">
-          <div class="second_title">
-            <%= link_to "献立登録", "/" %>
+      <% if user_signed_in? %>
+        <div class="header_next">
+          <div class="second_title_ber">
+            <div class="second_title">
+              <%= link_to "献立登録", "/" %>
+            </div>
+            <div class="second_title">
+              <%= link_to "マイ栄養素確認", specs_path %>
+            </div>
+            <div class="second_title">
+              <%= link_to "マイ栄養素設定", edit_spec_path(current_user) %>
+            </div>
+            <div class="second_title">
+              <%= link_to "menu登録", new_menu_path %>
+            </div>
           </div>
-          <div class="second_title">
-            <%= link_to "マイ栄養素確認", specs_path %>
-          </div>
-          <div class="second_title">
-            <%= link_to "マイ栄養素設定", edit_spec_path(current_user) %>
-          </div>
-          <div class="second_title">
-            <%= link_to "menu登録", "/" %>
+          <div class="hello_user">
+          こんにちは
+          <% if user_signed_in? %>
+            <%= current_user.nickname %>さん
+          <% end %>
           </div>
         </div>
-        <div class="hello_user">
-        こんにちは
-        <% if user_signed_in? %>
-          <%= current_user.nickname %>さん
-        <% end %>
+      <% else %>
+        <div class="header_next">
+          <div class="second_title_ber">
+            <div class="second_title">
+              <%= link_to "献立登録", new_user_registration_path %>
+            </div>
+            <div class="second_title">
+              <%= link_to "マイ栄養素確認", new_user_registration_path %>
+            </div>
+            <div class="second_title">
+              <%= link_to "マイ栄養素設定", new_user_registration_path %>
+            </div>
+            <div class="second_title">
+              <%= link_to "menu登録", new_user_registration_path %>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
       
     </header>
 

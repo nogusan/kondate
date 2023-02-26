@@ -71,41 +71,59 @@
             <div class="total_lipid"><%= "・脂質 : 200 g"%></div>
           </div>
         </div>
-
-        <div class="today_nutrients">
-          <div class="today_nutrients_title">目標値</div>
-          <div class="today_nutrients_box">
-            <div class="total_calry">・カロリー : <%= @spec.user_calorie%> kcal </div>
-            <div class="total_protein">・タンパク質 : <%=  @spec.user_protein %> g</div>
-            <div class="total_sugar">・糖質 : <%= @spec.user_sugar %> g</div>
-            <div class="total_lipid">・脂質 : <%= @spec.user_lipid %> g</div>
+        <% if @spec == nil %>
+          <div class="today_nutrients">
+          <div class="today_nutrients_title">本日の総摂取量</div>
+            
           </div>
-        </div>
+          
+        <% else %>
+          <div class="today_nutrients">
+            <div class="today_nutrients_title">目標値</div>
+            <div class="today_nutrients_box">
+              <div class="total_calry">・カロリー : <%= @spec.user_calorie%> kcal </div>
+              <div class="total_protein">・タンパク質 : <%=  @spec.user_protein %> g</div>
+              <div class="total_sugar">・糖質 : <%= @spec.user_sugar %> g</div>
+              <div class="total_lipid">・脂質 : <%= @spec.user_lipid %> g</div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
     
     <h2>おすすめのmenu一覧</h2>
     <div class="main_menu" >
-      <div class="menu_box">
-        <div class="menu_name"><%= "麻婆豆腐" %></div>
-        <div class="menu_nutrients">
-          栄養素
-          <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
-          <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
-          <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
-          <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+      <% if @menus.length == 0 %>
+        <div class="menu_box">
+          <div class="menu_name"><%= "麻婆豆腐" %></div>
+          <div class="menu_nutrients">
+            栄養素
+            <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
+            <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
+            <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
+            <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+            サンプル
+          </div>
         </div>
-      </div>
-      <div class="menu_box">
-        <div class="menu_name"><%= "焼肉" %></div>
-        <div class="menu_nutrients">
-          栄養素
-          <div class="menu_calry"><%= "・カロリー : 700 kcal"%></div>
-          <div class="menu_protein"><%= "・タンパク質 : 40 g"%></div>
-          <div class="menu_sugar"><%= "・糖質 : 120 g"%></div>
-          <div class="menu_lipid"><%= "・脂質 : 40 g"%></div>
+      <% else %>
+      <% end %>
+      <% @menus.each do |menu|%>
+        <div class="menu_box">
+          <div class="menu_name">
+            <%= menu.name %>
+          </div>
+          <div class="menu_menu">
+            <%= image_tag menu.image.variant(resize: '150x110'), class: 'message-image' if menu.image.attached? %>
+            <div class="menu_nutrients">
+              <div class="menu_calry">カロリー : <%= menu.calorie %> kcal</div>
+              <div class="menu_protein">タンパク質 : <%= menu.protein %> g</div>
+              <div class="menu_sugar">糖質 : <%= menu.sugar %> g</div>
+              <div class="menu_lipid">脂質 : <%= menu.lipid %> g</div>
+              ユーザー : <%= menu.user.nickname%>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

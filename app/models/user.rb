@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   has_many :schedules
   has_one :spec
+  has_many :menus
 end
