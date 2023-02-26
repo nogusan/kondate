@@ -66,11 +66,13 @@
 }
 .main_menu {
   display: flex;
+  flex-wrap: wrap;
 }
 .menu_box {
-  width: 300px;
+  width: 310px;
   padding: 5px;
   margin: 10px;
+  height: 160px;
   border: solid gray 2px;
   border-radius: 15px;
 }

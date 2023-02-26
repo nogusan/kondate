@@ -17,6 +17,11 @@ class MenusController < ApplicationController
     end
   end
 
+  def show
+    @menus = Menu.all 
+    @menu = Menu.where(menu_id: @menus.id).each { |m| m }
+  end
+
   private
   def move_to_signin
     unless user_signed_in?
