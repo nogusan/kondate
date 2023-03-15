@@ -4,4 +4,10 @@ class SchedulesController < ApplicationController
     @menus = Menu.all.order("created_at DESC")
   end
 
+  def new
+  end
+
+  def create
+  end
+  
 end
